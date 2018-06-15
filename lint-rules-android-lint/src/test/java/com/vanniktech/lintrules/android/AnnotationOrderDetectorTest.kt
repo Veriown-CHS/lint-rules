@@ -489,20 +489,6 @@ class AnnotationOrderDetectorTest {
         .expectClean()
   }
 
-  @Test fun kotlinAnnotationClassWithRetention() {
-    lint()
-        .allowCompilationErrors()
-        .files(kt("""
-          |package foo
-          |
-          |import kotlin.annotation.AnnotationRetention.RUNTIME
-          |
-          |@Retention(RUNTIME) annotation class Foo""".trimMargin()))
-        .issues(ISSUE_WRONG_ANNOTATION_ORDER)
-        .run()
-        .expectClean()
-  }
-
   @Test fun bindsBeforeIntoMapBeforeActivityKeyNegativeCase() {
     lint()
         .allowCompilationErrors()
