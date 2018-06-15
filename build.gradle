@@ -68,7 +68,6 @@ allprojects {
     mavenCentral()
     google()
     jcenter()
-      mavenLocal()
   }
 }
 
