@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.Veriown-CHS'
 afterEvaluate {
-  generateReleaseBuildConfig.enabled = false
+  generateReleaseBuildConfig.enabled = true
 }
 
 android {
@@ -17,3 +17,4 @@ dependencies {
   lintChecks project(':lint-rules-android-lint')
 }
 
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

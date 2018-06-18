@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 afterEvaluate {
-  generateReleaseBuildConfig.enabled = false
+  generateReleaseBuildConfig.enabled = true
 }
 
 android {
@@ -16,3 +16,4 @@ dependencies {
   lintChecks project(':lint-rules-rxjava2-lint')
 }
 
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

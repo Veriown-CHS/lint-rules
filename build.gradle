@@ -1,8 +1,6 @@
 apply plugin: 'com.github.ben-manes.versions'
 apply plugin: 'com.vanniktech.code.quality.tools'
 apply plugin: 'com.vanniktech.android.junit.jacoco'
-apply plugin: 'maven'
-
 
 buildscript {
   ext.versions = [
