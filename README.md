@@ -4,10 +4,20 @@ Lint-Rules
 A set of very opinionated lint rules.
 
 ## Android Lint Rules
-
+###Add it in your root build.gradle at the end of repositories:###
 ```groovy
-compile 'com.vanniktech:lint-rules-android:0.7.1'
-compile 'com.vanniktech:lint-rules-android:0.8.0-SNAPSHOT'
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+###Add the dependency###
+```groovy
+dependencies {
+	        implementation 'com.github.Veriown-CHS:lint-rules:v6.0'
+	}
 ```
 
 - **ConstraintLayoutToolsEditorAttribute** - The tools:layout_editor xml properties are only used for previewing and won't be used in your APK hence they're unnecessary and just add overhead.
