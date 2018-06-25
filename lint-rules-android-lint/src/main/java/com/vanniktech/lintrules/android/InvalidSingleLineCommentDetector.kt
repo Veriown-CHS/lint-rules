@@ -55,6 +55,7 @@ class InvalidSingleLineCommentDetector : Detector(), Detector.UastScanner, Detec
       } else if (Character.isLowerCase(group[1])) {
         handleFirstWordCapitalization(context, source, start, end, group)
       }
+      // Does't require below check
       /*else if (allowedEndings.none { group.endsWith(it) }) {
         handlePeriod(context, source, start, end, group)
       }*/
